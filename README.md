@@ -1,5 +1,5 @@
 # Mobile-Phone-Dataset-GSMArena
-This is Python script which scrap the GSMArena website mobile phones specification and save in the csv format files.
+This is Python script which scrape the GSMArena website mobile phones specification and save in the csv format files.
 
 ## Getting Started
 
@@ -37,12 +37,12 @@ above command can be used for all platforms (Windows, Linux and MacOS X)
 ### Running
 
 ```
-python gsmarena_scrapping.py
+python gsmarena_scraping.py
 ```
 
 ## Built With
 
-* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/) - Beautifulsoup4 python librabry for website scrapping.
+* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/) - Beautifulsoup4 python librabry for website scraping.
 
 ## Authors
 
