@@ -25,7 +25,7 @@ A step by step follow the below steps
 
   * [Windows](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation)
   * [Linux](https://www.tecmint.com/install-pip-in-linux/)
-  * [MacOS X](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos)
+  * [MacOS X](https://itsevans.com/install-pip-osx/)
 
 * Install Beautifulsoup4 (skip this step if you have already installed it)
   ```
