@@ -27,9 +27,7 @@ A step by step follow the below steps
   * [Linux](https://www.tecmint.com/install-pip-in-linux/)
   * [MacOS X](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos)
 
-* Install Beautifulsoup4
-
-  Beautifulsoup4 (skip this step if you have already installed it) 
+* Install Beautifulsoup4 (skip this step if you have already installed it)
   ```
   sudo pip install beautifulsoup4
   ```
