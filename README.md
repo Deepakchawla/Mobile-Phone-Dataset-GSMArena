@@ -35,9 +35,9 @@ A step by step follow the below steps
 
 ### Running
 
-```
-python gsmarena_scraping.py
-```
+ ```
+ python gsmarena_scraping.py
+ ```
 
 ## Built With
 
