@@ -35,9 +35,10 @@ A step by step follow the below steps
 
 ### Running
 
- ```
- python gsmarena_scraping.py
- ```
+  Run this command on your terminal
+  ```
+  python gsmarena_scraping.py
+  ```
 
 ## Built With
 
