@@ -54,6 +54,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Special Credits
 
-* BridgeLabz [Github](https://github.com/BridgeLabzSource) and [Linkedin](https://www.linkedin.com/company/bridgelabz-com/)
 * Dilip More [Linkedin](https://www.linkedin.com/in/dilip-more-7347324/)
 * Vivek Hebalkar [Linkedin](https://www.linkedin.com/in/vivek-hebalkar-3430ba23/) 
