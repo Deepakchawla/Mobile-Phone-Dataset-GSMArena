@@ -78,6 +78,7 @@ class Gsmarena():
         phone_data.update({"Brand": phone_brand})
         phone_data.update({"Model Name": model_name})
         phone_data.update({"Model Image": model_img})
+        temp = []
         for data1 in range(len(soup.findAll('table'))):
             table = soup.findAll('table')[data1]
             for line in table.findAll('tr'):
@@ -89,6 +90,8 @@ class Gsmarena():
                     text = text.rstrip()
                     text = text.replace("\n", "")
                     temp.append(text)
+                    if temp[0] in phone_data.keys():
+                        temp[0] = temp[0] + '_1'
                     if temp[0] not in self.features:
                         self.features.append(temp[0])
                 if not temp:
@@ -118,27 +121,29 @@ class Gsmarena():
         files_list = self.check_file_exists()
         for brand in phone_brand:
             phones_data = []
-            if (brand[0] + '.csv') not in files_list:
+            if (brand[0].title() + '.csv') not in files_list:
                 link = self.crawl_phones_models(brand[2])
                 model_value = 1
-                print("Working on", brand[0], "brand.")
+                print("Working on", brand[0].title(), "brand.")
                 for value in link:
                     phones_data.append(self.crawl_phones_models_specification(value, brand[0]))
                     print("Completed ", model_value, "/", len(link))
                     model_value+=1
-                with open(self.absolute_path + '/' + brand[0] + ".csv", "w")  as file:
+                with open(self.absolute_path + '/' + brand[0].title() + ".csv", "w")  as file:
                     dict_writer = csv.DictWriter(file, fieldnames=self.features)
                     dict_writer.writeheader()
                     dict_writer.writerows(phones_data)
                 print("Data loaded in the file")
             else:
-                print(brand[0], '.csv file already in your directory.')
+                print(brand[0].title() + '.csv file already in your directory.')
 
 
 # This is the main function which create the object of Gsmarena class and call the save_specificiton_to_file function.
-if __name__ == "__main__":
-    obj = Gsmarena()
-    try:
-        obj.save_specification_to_file()
-    except KeyboardInterrupt:
-        print("File has been stopped due to KeyBoard Interruption.")
+i = 1
+while i == 1:
+    if __name__ == "__main__":
+        obj = Gsmarena()
+        try:
+            obj.save_specification_to_file()
+        except KeyboardInterrupt:
+            print("File has been stopped due to KeyBoard Interruption.")
