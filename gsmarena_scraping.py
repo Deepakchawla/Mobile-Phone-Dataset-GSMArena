@@ -126,7 +126,9 @@ class Gsmarena():
                 model_value = 1
                 print("Working on", brand[0].title(), "brand.")
                 for value in link:
-                    phones_data.append(self.crawl_phones_models_specification(value, brand[0]))
+                    datum = self.crawl_phones_models_specification(value, brand[0])
+                    datum = { k:v.replace('\n', ' ').replace('\r', ' ') for k,v in datum.items() }
+                    phones_data.append(datum)
                     print("Completed ", model_value, "/", len(link))
                     model_value+=1
                 with open(self.absolute_path + '/' + brand[0].title() + ".csv", "w")  as file:
