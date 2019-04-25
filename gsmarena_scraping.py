@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import os
 import time
+import json
 
 # Class gsmarena scrap the website phones models and its devices and save to csv file individually.
 class Gsmarena():
@@ -134,7 +135,11 @@ class Gsmarena():
                 with open(self.absolute_path + '/' + brand[0].title() + ".csv", "w")  as file:
                     dict_writer = csv.DictWriter(file, fieldnames=self.features)
                     dict_writer.writeheader()
-                    dict_writer.writerows(phones_data)
+                    str_phones_data = json.dumps(phones_data)
+                    encoded = str_phones_data.encode('utf-8')
+                    load_list = json.loads(encoded)
+                    for dicti in load_list:
+                        dict_writer.writerow({k:v.encode('utf-8') for k,v in dicti.items()})
                 print("Data loaded in the file")
             else:
                 print(brand[0].title() + '.csv file already in your directory.')
