@@ -22,10 +22,11 @@ class Gsmarena():
     def crawl_html_page(self, sub_url):
 
         url = self.url + sub_url  # Url for html content parsing.
-
+        header={"User-Agent":"#user agent of your system  "}
+        time.sleep(30)  #SO that your IP does not gets blocked by the website
         # Handing the connection error of the url.
         try:
-            page = requests.get(url)
+            page = requests.get(url,timeour= 5, header=header)
             soup = BeautifulSoup(page.text, 'html.parser')  # It parses the html data from requested url.
             return soup
 
