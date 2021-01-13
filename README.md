@@ -1,43 +1,24 @@
 # Mobile-Phone-Dataset-GSMArena
 This is Python script which scrape the GSMArena website mobile phones specification and save in the csv format files.
 
-## Getting Started
-
-Download the python file (gsmarena_scraping.py) and run it on your local machine.
-
 ### Prerequisites
 
 * Python3.x
-* BeautifulSoup
 * Pip
 
 ### Installing
 
-A step by step follow the below steps
-
-* Install Python3.x on: (skip this step if you have already installed it) 
-
-  * [Windows](https://realpython.com/installing-python/#windows)
-  * [Linux](https://realpython.com/installing-python/#ubuntu)
-  * [MacOS X](https://realpython.com/installing-python/#macos-mac-os-x)
-
-* Install pip package on: (skip this step if you have already installed it) 
-
-  * [Windows](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation)
-  * [Linux](https://www.tecmint.com/install-pip-in-linux/)
-  * [MacOS X](https://itsevans.com/install-pip-osx/)
-
-* Install Beautifulsoup4 (skip this step if you have already installed it)
+* Install reqiurement text file using pip3
+  
   ```
-  sudo pip install beautifulsoup4
+  pip3 install -r requirements.txt
   ```
-  above command can be used for all platforms (Windows, Linux and MacOS X)
 
 ### Running
 
   Run this command on your terminal
   ```
-  python gsmarena_scraping.py
+  python3 gsmarena_scraping.py
   ```
 
 ## Built With
@@ -51,8 +32,3 @@ A step by step follow the below steps
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## Special Credits
-
-* Dilip More [Linkedin](https://www.linkedin.com/in/dilip-more-7347324/)
-* Vivek Hebalkar [Linkedin](https://www.linkedin.com/in/vivek-hebalkar-3430ba23/) 
