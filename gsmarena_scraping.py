@@ -26,7 +26,7 @@ class Gsmarena():
         time.sleep(30)  #SO that your IP does not gets blocked by the website
         # Handing the connection error of the url.
         try:
-            page = requests.get(url,timeour= 5, header=header)
+            page = requests.get(url,timeout= 5, headers=header)
             soup = BeautifulSoup(page.text, 'html.parser')  # It parses the html data from requested url.
             return soup
 
